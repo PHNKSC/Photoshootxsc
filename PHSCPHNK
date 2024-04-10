@@ -44,7 +44,24 @@ game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):Wait
 
 
 end)
+--dab
+tab1:CreateButton("DAB", function()
 
+local args = {
+    [1] = "LeftUpperArm",
+    [2] = Vector3.new(-0.39598050713539124, 0, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+
+local args = {
+    [1] = "RightUpperArm",
+    [2] = CFrame.new(0, 0, 0, 0.401462674, 0.843717217, -0.356327027, 0.151235431, -0.444784701, -0.882776558, -0.90330261, 0.300512552, -0.306164384)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeTransformationForPart"):FireServer(unpack(args))
+
+end)
 --spinheadY
 tab2:CreateButton("HEADLESS",function()
 
