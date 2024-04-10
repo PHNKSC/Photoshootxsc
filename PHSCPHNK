@@ -1,0 +1,200 @@
+local PabloLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BatuKvi123/PabloLibV3/main/PabloLibV3"))()
+local window = PabloLib:Create(
+"PHNKMOD UI (PHOTOSHOOT X)", -- Name here.
+"Enabled", -- If you want draggable set here to "Enabled" if you dont want set to "Disabled".
+"p" -- You can put any keybind here to open close.
+)
+
+local tab4 = window:CreateTab("Credit")
+local tab3 = window:CreateTab("VIP ONLY")
+local tab1 = window:CreateTab("POSE")
+local tab2 = window:CreateTab("MAIN")
+
+--function
+
+tab1:CreateButton("TPOSE", function()
+--t-pose
+local args = {
+    [1] = "RightUpperArm",
+    [2] = CFrame.new(0, 0, 0, -0.045992400497198105, -0.9989417791366577, 0, 0.9989417791366577, -0.045992400497198105, 0, 0, 0, 1)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeTransformationForPart"):FireServer(unpack(args))
+
+local args = {
+    [1] = "RightUpperArm",
+    [2] = Vector3.new(0, -0.5, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+
+local args = {
+    [1] = "LeftUpperArm",
+    [2] = CFrame.new(0, 0, 0, 0.18764148652553558, 0.9822375178337097, 0, -0.9822375178337097, 0.18764150142669678, 0, 0, 0, 1)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeTransformationForPart"):FireServer(unpack(args))
+
+local args = {
+    [1] = "LeftUpperArm", 
+    [2] = Vector3.new(0, -0.5, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+
+
+end)
+
+--spinheadY
+tab2:CreateButton("HEADLESS",function()
+
+local args = {
+    [1] = "Head",
+    [2] = Vector3.new(0, 1039, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+
+end)
+
+--delete arm
+
+tab2:CreateButton("Delete Arm", function()
+
+local args = {
+    [1] = "LeftUpperArm",
+    [2] = Vector3.new(0, -5, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+
+local args = {
+    [1] = "RightUpperArm",
+    [2] = Vector3.new(0, -5, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+
+end)
+
+--remove body test
+tab2:CreateButton("Delete Body (test)", function()
+
+local args = {
+    [1] = "UpperTorso",
+    [2] = Vector3.new(0, 90, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+
+
+end)
+
+tab3:CreateButton("GET CMD LIST", function()
+
+local args = {
+    [1] = ":cmd",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+local args = {
+    [1] = "GetCommandList",
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("ExtulsRemoteFunction"):InvokeServer(unpack(args))
+
+end)
+
+tab3:CreateButton("Char 1", function()
+
+local args = {
+    [1] = ":charme 1",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab3:CreateButton("Char 2", function()
+
+local args = {
+    [1] = ":charme 2",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab3:CreateButton("Char 3", function()
+
+local args = {
+    [1] = ":charme 3",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab3:CreateButton("Unchar", function()
+
+local args = {
+    [1] = ":uncharme",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab3:CreateButton("KORBLOX", function()
+
+local args = {
+    [1] = ":bundle 192",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab3:CreateButton("Get Dominus Empyreus", function()
+
+local args = {
+    [1] = ":accessory 21070012",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab1:CreateButton("Get Dominus Astra", function()
+local args = {
+    [1] = ":accessory 162067148",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab3:CreateButton("Get Dominus Aureus", function()
+
+local args = {
+    [1] = ":accessory 138932314",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab3:CreateButton("REFRESH", function()
+
+local args = {
+    [1] = ":refresh",
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+end)
+
+tab4:CreateInfo("CREDIT YT : PHNKMOD ")
