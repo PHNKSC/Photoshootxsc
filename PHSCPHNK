@@ -97,25 +97,6 @@ wait(0)
 end
 
 
---delete arm
-tab2:CreateButton("Delete Arm", function()
-
-local args = {
-    [1] = "LeftUpperArm",
-    [2] = Vector3.new(0, 100, 0)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
-
-local args = {
-    [1] = "RightUpperArm",
-    [2] = Vector3.new(0, 100, 0)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
-
-end)
-
 --remove body test
 tab2:CreateButton("Delete Body (test)", function()
 
