@@ -74,20 +74,42 @@ game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):Wait
 
 end)
 
---delete arm
+--delete leg
 
+
+tab2:CreateButton("Delete Leg", function()
+local args = {
+    [1] = "RightUpperLeg",
+    [2] = Vector3.new(0, 100, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+wait(0)
+local args = {
+    [1] = "LeftUpperLeg",
+    [2] = Vector3.new(0, 100, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
+wait(0)
+
+
+end
+
+
+--delete arm
 tab2:CreateButton("Delete Arm", function()
 
 local args = {
     [1] = "LeftUpperArm",
-    [2] = Vector3.new(0, -5, 0)
+    [2] = Vector3.new(0, 100, 0)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
 
 local args = {
     [1] = "RightUpperArm",
-    [2] = Vector3.new(0, -5, 0)
+    [2] = Vector3.new(0, 100, 0)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("PoseEditorDependencies"):WaitForChild("ChangeOffsetForPart"):FireServer(unpack(args))
